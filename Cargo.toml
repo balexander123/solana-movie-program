@@ -1,0 +1,23 @@
+# cargo.toml
+[package]
+name = "movie-review-program"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+solana-program = "~1.14.11"
+borsh = "0.9.3"
+thiserror = "1.0.31"
+spl-token = { version="3.2.0", features = [ "no-entrypoint" ] }
+spl-associated-token-account = { version="1.1.2", features = [ "no-entrypoint" ] }
+
+[dev-dependencies]
+solana-sdk = "1.14.8"
+solana-program-test = "1.14.8"
+assert_matches = "1.5.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
